@@ -1,0 +1,7 @@
+.cont {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+    margin-block: 16px;
+}
