@@ -1,6 +1,7 @@
 const cont = document.querySelector(".cont");
 
 for (let i = 0; i <= 255; i++) {
+    let numInteractions = 1;
     const div = document.createElement("div");
     div.classList = "gridDiv"
     div.style.width = "80px";
@@ -9,7 +10,11 @@ for (let i = 0; i <= 255; i++) {
     let randomR = Math.floor(Math.random() * 255);
     let randomG = Math.floor(Math.random() * 255);
     let randomB = Math.floor(Math.random() * 255);
-    div.addEventListener("mouseenter", () => { div.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})` })
-    div.addEventListener("mouseleave", () => { div.style.backgroundColor = "#fff" })
+    div.addEventListener("mouseenter", () => {
+        div.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+        div.style.opacity = `${numInteractions * 10}%`;
+        numInteractions++;
+    });
+    div.addEventListener("mouseleave", () => { div.style.backgroundColor = "#fff"; });
     cont.appendChild(div);
 }
