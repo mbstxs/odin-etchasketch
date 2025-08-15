@@ -1,7 +1,18 @@
-.cont {
+body {
+    margin: 0;
+    padding: 0;
     display: flex;
-    flex-wrap: wrap;
-    flex: 1;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-block: 16px;
+    height: 100vh;
+    gap: 16px;
+}
+
+.cont {
+    width: 680px;
+    height: 680px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
 }
