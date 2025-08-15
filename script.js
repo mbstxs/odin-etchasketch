@@ -1,21 +1,22 @@
+const body = document.querySelector("body");
 const cont = document.querySelector(".cont");
-const div = document.createElement("div")
+const div = document.createElement("div");
 const modalBtn = document.createElement("button");
-const gridRows = document.querySelectorAll(".gridRow")
+const gridRows = document.querySelectorAll(".gridRow");
 let numSquares = 16;
 
-modalBtn.textContent = "Custom Grid"
-modalBtn.style.padding = "16px 20px"
-modalBtn.style.backgroundColor = "#791dafff"
-modalBtn.style.color = "#fff"
-modalBtn.style.borderRadius = "4px"
+modalBtn.textContent = "Custom Grid";
+modalBtn.style.padding = "16px 20px";
+modalBtn.style.backgroundColor = "#791dafff";
+modalBtn.style.color = "#fff";
+modalBtn.style.borderRadius = "4px";
 
 modalBtn.addEventListener("click", () => {
     for (let i = 1; i <= numSquares; i++)
-        cont.removeChild(cont.lastChild)
+        cont.removeChild(cont.lastChild);
     numSquares = prompt("Set the number of squares");
     if (isNaN(numSquares) || numSquares <= 0 || numSquares > 100) {
-        alert("invalid input, insert a number between 1 and 100")
+        alert("invalid input, insert a number between 1 and 100");
     }
     else
         drawGrid(numSquares);
@@ -33,8 +34,8 @@ const drawGrid = (numSquares) => {
         rowDiv.style.width = "100%";
         rowDiv.style.height = "100%";
         rowDiv.style.display = "flex";
-        rowDiv.classList = "gridRow"
-        cont.appendChild(rowDiv)
+        rowDiv.classList = "gridRow";
+        cont.appendChild(rowDiv);
         for (let j = 1; j <= numSquares; j++) {
             const colDiv = document.createElement("div")
             let numInteractions = 1;
