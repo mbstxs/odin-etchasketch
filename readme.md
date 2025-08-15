@@ -6,4 +6,4 @@ This is the last TOP project of the foundations course, it consiste on the devel
 
 ## How to Use
 
-To view this project click this [here](https://mbstxs.github.io/odin-etchasketch/).
+To view this project click [here](https://mbstxs.github.io/odin-etchasketch/).
