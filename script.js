@@ -11,7 +11,7 @@ for (let i = 0; i <= 255; i++) {
     let randomG = Math.floor(Math.random() * 255);
     let randomB = Math.floor(Math.random() * 255);
     div.addEventListener("mouseenter", () => {
-        div.style.backgroundColor = `rgba(${randomR}, ${randomG}, ${randomB}, ${numInteractions * 10})`;
+        div.style.backgroundColor = `rgba(${randomR}, ${randomG}, ${randomB}, ${(numInteractions * 10) / 100})`;
         numInteractions++;
     });
     div.addEventListener("mouseleave", () => { div.style.backgroundColor = "#fff"; });
